@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <!--This app uses the UTF-8 format-->
+        <meta charset="utf-8" />
+        <title>HFOS</title>
+        <!--Roboto (default font)-->
+        <link href='http://fonts.googleapis.com/css?family=Roboto:400,400italic,700italic,700' rel='stylesheet' type='text/css' />
+        <!--jQuery-->
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+        <!--Main script file-->
+        <script src="/r/main.js"></script>
+        <!--Main CSS file-->
+        <link rel="stylesheet" type="text/css" href="/r/main.css" />
+    </head>
+    <body>
+        <!--Loading screen-->
+        <div id="preloader">
+            <!--Loading text-->
+            <span class="loading">Loading HFOS...</span>
+        </div>
+        <div id="ui">
+            <!--Apps menu-->
+            <div id="apps-menu" style="display: none" class="app">
+                <div></div>
+            </div>
+            <!--Taskbar-->
+            <div id="taskbar" class="app">
+                <div class="tilebutton tb-button" id="apps-button" style="opacity: 0.6"></div>
+            </div>
+        </div>
+    </body>
+</html>

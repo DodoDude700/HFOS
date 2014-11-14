@@ -1,0 +1,41 @@
+/* Reset styles for html body required to maximize other sizes */
+
+html, body {width: 100%; height: 100%}
+
+/* Some default styles for body */
+
+body {background-color:  #ffffff; font-family: "Roboto", Arial, Helvetica, sans-serif; font-size: 0.9em; padding: 0; margin: 0;}
+
+/* No underlines for links */
+
+a {text-decoration: none; }
+
+/* Standard light grey background for divs*/
+
+div {background-color: #e7e7e7}
+
+#preloader {vertical-align: middle; height:  100%; width: 100%; text-align: center; z-index: 99999}
+
+/* Required for vertical align for unknown reasons*/
+
+#preloader:before {content: ''; display: inline-block; width: 0; height: 100%; vertical-align: middle;}
+
+/* Larger sized loading text*/
+
+#preloader .loading {font-size:  1.4em; }
+
+/*Moving on to content styles*/
+
+#ui {width: 100%; height: 100%; background: url(//lh6.googleusercontent.com/-IxRknD2180s/UcojKSfeWII/AAAAAAAABkA/IKXa_LVQP0U/s1000-fcrop64=1,000013d5ffffec29/%C2%A9%2BAravind%2BKrishnaswamy_20120408-%2818_58_48%29-sobranes-arch-s2-0387-Edit.jpg) no-repeat; background-size: cover; background-position: center center; }
+
+/* Taskbar */
+
+#taskbar {position: absolute; width: 100%; bottom: 0; height: 40px; background: #bfbfbf; opacity: 0.9}
+
+/* Taskbar buttons*/
+
+div.tb-button {height: 40px; width:  40px; }
+.tilebutton {background: url(/r/img/tiles.png); }
+
+/*Apps menu*/
+#apps-menu{background: #bfbfbf; width: 400px; height: 500px; position: absolute; bottom: 40px}
