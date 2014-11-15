@@ -5,17 +5,16 @@
     <head>
         <!--This app uses the UTF-8 format-->
         <meta charset="utf-8" />
-        <title>HFOS</title>
+        <title>Welcome to HFOS</title>
         <!--Roboto (default font)-->
         <!--Resets "used before"-->
         <script>
-            localStorage.setItem('usedBefore', 'true')
+            localStorage.setItem('-hfos-usedBefore', 'true');
+            open('/','_self');
         </script>
         <link href='http://fonts.googleapis.com/css?family=Roboto:400,400italic,700italic,700' rel='stylesheet' type='text/css' />
         <!--jQuery-->
         <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-        <!--Main script file-->
-        <script src="/r/main.js"></script>
         <!--Main CSS file-->
         <link rel="stylesheet" type="text/css" href="/r/main.css" />
     </head>
