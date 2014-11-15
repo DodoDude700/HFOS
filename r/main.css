@@ -14,23 +14,23 @@ a {text-decoration: none; }
 
 div {background-color: #e7e7e7}
 
-#preloader {vertical-align: middle; height:  100%; width: 100%; text-align: center; z-index: 99999}
+#-hfos-preloader {vertical-align: middle; height:  100%; width: 100%; text-align: center; z-index: 99999}
 
 /* Required for vertical align for unknown reasons*/
 
-#preloader:before {content: ''; display: inline-block; width: 0; height: 100%; vertical-align: middle;}
+#-hfos-preloader:before {content: ''; display: inline-block; width: 0; height: 100%; vertical-align: middle;}
 
 /* Larger sized loading text*/
 
-#preloader .loading {font-size:  1.4em; }
+#-hfos-preloader .-hfos-preloader-loading {font-size:  1.4em; }
 
 /*Moving on to content styles*/
 
-#ui {width: 100%; height: 100%; background: url(//lh6.googleusercontent.com/-IxRknD2180s/UcojKSfeWII/AAAAAAAABkA/IKXa_LVQP0U/s1000-fcrop64=1,000013d5ffffec29/%C2%A9%2BAravind%2BKrishnaswamy_20120408-%2818_58_48%29-sobranes-arch-s2-0387-Edit.jpg) no-repeat; background-size: cover; background-position: center center; }
+#-hfos-ui {width: 100%; height: 100%; position: absolute; top: 0; background: url(//lh6.googleusercontent.com/-IxRknD2180s/UcojKSfeWII/AAAAAAAABkA/IKXa_LVQP0U/s1000-fcrop64=1,000013d5ffffec29/%C2%A9%2BAravind%2BKrishnaswamy_20120408-%2818_58_48%29-sobranes-arch-s2-0387-Edit.jpg) no-repeat; background-size: cover; background-position: center center; }
 
 /* Taskbar */
 
-#taskbar {position: absolute; width: 100%; bottom: 0; height: 40px; background: #bfbfbf; opacity: 0.9}
+#-hfos-taskbar {position: absolute; width: 100%; bottom: 0; height: 40px; background: #bfbfbf; opacity: 0.9}
 
 /* Taskbar buttons*/
 

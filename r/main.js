@@ -1,17 +1,44 @@
+//Convenience variables:
+var $w = window
+var $d = document
+
+
 //Tests for features that must exist in a supported browser
-if ((typeof localStorage=="undefined")||(typeof SVGSVGElement=="undefined")||(typeof indexedDB=="undefined")||(typeof console=="undefined")) {alert("You are using an unsupported browser. Any errors that may arise will not be fixed. ")}
+
+if (!$w.localStorage||!$w.SVGSVGElement||!$w.indexedDB||!$w.console||!$w.JSON) {alert("You are using an unsupported browser. Any errors that may arise will not be corrected. ")}
+
+
+
+//Initializes IndexedDB
+
+
+
+//
+//Creates setting entry in LocalStorage if non-existent 
+if (localStorage.getItem('-hfos-settings') === null) {
+    localStorage.setItem('-hfos-settings', '{}');
+}
+//initializes setting object
+var settings = JSON.parse(localStorage.getItem('-hfos-settings'));
+
+
+//Saves settings
+settings.save = function() {
+    localStorage.setItem('settings',JSON.stringify(settings))
+}
+
 
 var HFOS = {version:"Alpha 0.1.0"}
 
 
 HFOS['main'] = function () {
     //Tests if user has used the app before using a key in localStorage
-    if (localStorage.getItem('usedBefore') === null) {
+    if (localStorage.getItem('-hfos-usedBefore') === null) {
         //redirects user to welcome page
-        window.location.pathname = "/welcome.html";
+        open("/welcome.html","_self");
     }
     //Fade out preloader when loading complete
-    $('#preloader').fadeOut(1000)
+    $('#-hfos-preloader').fadeOut(1000)
     //Changes title to have version
     document.title += (" " + HFOS.version);
 
@@ -44,11 +71,13 @@ HFOS['main'] = function () {
             var contextMenuOpener = function () {
                 var app = HFOS.getAppFromNode(element);
                 var menu = $('<div>');
-                for (var i=0; i<menuObj.length; i++) {
+                for (var i = 0; i < menuObj.length; i++) {
                     menu.append($('<div>').text(menuObj[i].value));
 
-                }
+                } 
+                menu.addClass('')
                 console.log(menu[0]);
+
             }
             element.removeEventListener('contextmenu', contextMenuOpener)
             element.addEventListener('contextmenu', contextMenuOpener)
@@ -81,7 +110,7 @@ HFOS['main'] = function () {
 //Return the API-ed version of the element
 var API = function (element) {
     if (!(HFOS.isDOMElement(element)||element==document)) {
-        throw new TypeError('Invalid DOM element')
+        throw new TypeError('Not a DOM element')
     }
     return HFOS.APIInit(element);
 }
